@@ -66,3 +66,48 @@ This is a detailed documentation of Linux commands, including their usage, optio
   - Options (or flags) are optional parameters that modify the behavior of the command. They usually start with a hyphen (-) or double hyphen (--).
   - Arguments are the input or target for the command, such as file names or directories.
   - Example: `ls -l /home/user` where `ls` is the command name, `-l` is an option, and `/home/user` is an argument.
+
+## Module 2- The Linux File System:
+
+- #### What is a File System?
+  - A file system is a method of organizing and storing files on a storage device, such as a hard drive or SSD.
+  - The file system defines how files are named, stored, and accessed, as well as how directories are structured.
+  - Linux supports several file systems and each file system has its own features and performance characteristics, making it suitable for different use cases.
+
+- #### Linux File System Hierarchy.
+  - The Linux file system hierarchy is organized in a tree-like structure, with the root directory (/) at the top and various subdirectories below it.
+  - Common directories include:
+    + `/bin`: Contains essential command-line utilities and programs.
+    + `/sbin`: Contains system administration commands and utilities.
+    + `/boot`: Contains files needed to boot the system, including the kernel and bootloader.
+    + `/home`: Contains user home directories, where users store their personal files and settings.
+    + `/dev`: Contains device files that represent hardware devices on the system.
+    + `/etc`: Contains system configuration files and settings.
+    + `/lib`: Contains shared libraries and kernel modules needed by programs.
+    + `/media`: Contains mount points for removable media, such as USB drives and CD-ROMs.
+    + `/mnt`: Contains mount points for temporarily mounted file systems.
+    + `/opt`: Contains optional software packages and applications.
+    + `/proc`: Contains virtual files that provide information about system processes and kernel parameters.
+    + `/root`: The home directory for the root user (system administrator).
+    + `/run`: Contains runtime data and information about the system's current state.
+    + `/srv`: Contains data for services provided by the system, such as web servers and databases.
+    + `/tmp`: Contains temporary files created by programs and users.
+    + `/usr`: Contains user-related programs and data, including applications and libraries.
+    + `/var`: Contains variable data, such as log files, mail spools, and temporary files.
+  - The file system hierarchy is designed to be consistent and predictable, making it easier for users and administrators to navigate and manage files.
+    
+  - Absoulte VS Relative Paths:
+    - Absolute Paths:
+      The full path of a file or directory from the root directory. 
+      It used forward slash (/) as the separator. 
+      Use '/' after every directory name.
+      Example: `cd /home/username/Documents/file.txt`.
+      Absolute paths are more reliable.
+    
+    - Relative Paths:
+      The path of a file or directory relative to the current working directory.
+      It does not start with a forward slash (/).
+      Use '.' to represent the current directory.
+      Use '..' to represent the parent directory.
+      Example: `cd Documents/file.txt` (if the current directory is /home/username).
+      Relative paths are more convenient for navigating within the current directory.
