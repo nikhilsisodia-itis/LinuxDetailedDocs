@@ -24,7 +24,7 @@ This is a detailed documentation of Linux commands, including their usage, optio
   - Open source software is often developed collaboratively by a community of developers and users, which leads to rapid development and innovation.
   - Examples of open source software include the Linux kernel, the Apache web server, and the Mozilla Firefox web browser.
 
-  - #### What is Source Code?
+- #### What is Source Code?
     - Source code is the human-readable version of a computer program. It is written in a programming language and can be compiled or interpreted to create an executable program.
     - Source code is often distributed with open source software, allowing users to view and modify the code.
     - Examples of programming languages include C, C++, Python, and Java.
@@ -98,16 +98,99 @@ This is a detailed documentation of Linux commands, including their usage, optio
     
   - Absoulte VS Relative Paths:
     - Absolute Paths:
-      The full path of a file or directory from the root directory. 
-      It used forward slash (/) as the separator. 
-      Use '/' after every directory name.
-      Example: `cd /home/username/Documents/file.txt`.
-      Absolute paths are more reliable.
+      - The full path of a file or directory from the root directory. 
+      - It used forward slash (/) as the separator. 
+      - Use '/' after every directory name.
+      - Example: `cd /home/username/Documents/file.txt`.
+      - Absolute paths are more reliable.
     
     - Relative Paths:
-      The path of a file or directory relative to the current working directory.
-      It does not start with a forward slash (/).
-      Use '.' to represent the current directory.
-      Use '..' to represent the parent directory.
-      Example: `cd Documents/file.txt` (if the current directory is /home/username).
-      Relative paths are more convenient for navigating within the current directory.
+      - The path of a file or directory relative to the current working directory.
+      - It does not start with a forward slash (/).
+      - Use '.' to represent the current directory.
+      - Use '..' to represent the parent directory.
+      - Example: `cd Documents/file.txt` (if the current directory is /home/username).
+      - Relative paths are more convenient for navigating within the current directory.
+
+## Module 3- Getting started with the Terminal:
+- #### Opening the Terminal.
+  - To open the terminal, you can use the following methods:
+    + Press `Ctrl + Alt + T` on your keyboard.
+    + Search for "Terminal" in your application menu or dashboard.
+    + Right-click on the desktop or file manager and select "Open Terminal" or "Open in Terminal."
+  - The terminal window will open, and you will see a command prompt where you can enter commands.
+
+- #### Basic Terminal Shorcuts:
+  + `ctrl + l`: Clear the terminal screen.
+  + `ctrl + c`: Cancel the current command or process.
+  + `ctrl + z`: Suspend the current command or process.
+  + `ctrl + a`: Move the cursor to the beginning of the line.
+  + `ctrl + e`: Move the cursor to the end of the line.
+  + `ctrl + u`: Delete the line from the cursor to the beginning.
+  + `ctrl + k`: Delete the line from the cursor to the end.
+  + `ctrl + w`: Delete the word before the cursor.
+  + `ctrl + r`: Search through command history.
+  + `ctrl + d`: Log out of the current session or close the terminal.
+  + `ctrl + shift + t`: Open a new terminal tab.
+  + `ctrl + shift + n`: Open a new terminal window.
+  + `ctrl + shift + c`: Copy selected text to the clipboard.
+  + `ctrl + shift + v`: Paste text from the clipboard into the terminal.
+  + `ctrl + shift + page up`: Scroll up in the terminal.
+  + `ctrl + shift + page down`: Scroll down in the terminal.
+  + `ctrl + shift + plus (+)`: Increase font size.
+  + `ctrl + minus (-)`: Decrease font size.
+  + `ctrl + 0`: Reset font size to default.
+  + `ctrl + shift + q`: Close the terminal window.
+  + `ctrl + left arrow`: Move the cursor one word to the left.
+  + `ctrl + right arrow`: Move the cursor one word to the right.
+  + `ctrl + shift + up arrow`: Scroll up one line.
+  + `ctrl + shift + down arrow`: Scroll down one line.
+  + `ctrl + shift + home`: Move the cursor to the beginning of the terminal buffer.
+  + `ctrl + shift + end`: Move the cursor to the end of the terminal buffer.
+  + `ctrl + shift + f`: Open the search bar to find text in the terminal.
+
+- #### Basic Terminal Commands:
+  - `pwd`: Print the current working directory.
+  - `ls`: List files and directories in the current directory.
+    - `ls <path_to_directory>`: List files and directories with detailed information.
+  - `cd`: Change the current directory.
+    - `cd <directory_name>`: Change to the specified directory.
+    - `cd ..`: Move to the parent directory.
+    - `cd ~`: Move to the home directory.
+  - `mkdir`: Create a new directory.
+    - `mkdir <directory_name>`: Create a new directory with the specified name.
+  - `cp`: Copy files or directories.
+    - `cp <source_file> <destination_file>`: Copy the source file to the destination file.
+    - `cp -r <source_directory> <destination_directory>`: Copy the source directory and its contents to the destination directory.
+  - `mv`: Move or rename files or directories.
+    - `mv <source_file> <destination_file>`: Move the source file to the destination file.
+  - `touch`: Create an empty file or update the timestamp of an existing file.
+    - `touch <file_name>`: Create an empty file with the specified name.
+  - `cat`: Concatenate and display the contents of a file.
+    - `cat <file_name>`: Display the contents of the specified file.
+  - `more`: View the contents of a file one screen at a time.
+    - `more <file_name>`: View the contents of the specified file.
+  - `less`: View the contents of a file with backward scrolling.
+    - `less <file_name>`: View the contents of the specified file.
+  - `head`: Display the first few lines of a file.
+    - `head <file_name>`: Display the first 10 lines of the specified file.
+  - `tail`: Display the last few lines of a file.
+    - `tail <file_name>`: Display the last 10 lines of the specified file.
+  - `echo`: Display a message or variable value in the terminal.
+    - `echo $<variable_name>`: Display the specified message in the terminal.
+  - `man`: Display the manual page for a command.
+    - `man <command_name>`: Display the manual page for the specified command.
+  - `clear`: Clear the terminal screen.
+  - `history`: Display the command history.
+  - `exit`: Exit the terminal or log out of the current session.
+  - `whoami`: Display the current user's username.
+  - `date`: Display the current date and time.
+  - `uname`: Display system information, such as the kernel version and architecture.
+  - `df`: Display disk space usage for file systems.
+  - `du`: Display disk usage for files and directories.
+  - `free`: Display memory usage information.
+  - `top`: Display real-time system resource usage, including CPU and memory usage.
+  - `ps`: Display information about running processes.
+  - `kill`: Terminate a running process by its process ID (PID).
+    - `kill <process_id>`: Terminate the specified process.
+  
