@@ -501,3 +501,24 @@ This is a detailed documentation of Linux commands, including their usage, optio
     - `-i` flag stands for ignore.
   - `cmp -n <number_of_bytes> <file1> <file2>`: Compare only the specified number of bytes from the beginning of the files.
     - `-n` flag stands for number.
+
+  ## Module 14- Compressing & archiving directories and files.
+  - `tar` command: Create, extract, and manage tar archives.
+  - `tar -cvf <archive_name> <file_name>`: Create a tar archive.
+    - `-cvf` flags stand for create, verbose, and file.
+  - `tar -xvf <archive_name>`: Extract a tar archive.
+    - `-xvf` flags stand for extract, verbose, and file.
+  - `tar -tvf <archive_name>`: List the contents of a tar archive.
+    - `tvf` flags stand for list, verbose, and file.
+  - `tar -czvf <archive_name> <file_name>`: Create a compressed tar archive.
+    - `-czvf` flags stand for create, compress, verbose, and file.
+  - `tar -xzvf <archive_name>`: Extract a compressed tar archive.
+    - `-xzvf` flags stand for extract, decompress, verbose, and file.
+  - `tar -tzvf <archive_name>`: List the contents of a compressed tar archive.
+    - `-tzvf` flags stand for list, decompress, verbose, and file.
+  - `tar -cvf <archive_name> <directory_name>`: Create a tar archive of a directory.
+  - `tar -xvf <archive_name> -C <directory_name>`: Extract a tar archive to a specified directory.
+    - `-C` flag stands for change directory.
+  - `tar -xzvf <archive_name> -C <directory_name>`: Extract a compressed tar archive to a specified directory.
+  - `tar -cvf <archive_name> <file_name> -C <directory_path>`: Create a tar archive of the specified file in the specified directory.
+  - `tar -czvf <archive_name> <file_name> -C <directory_path>`: Create a compressed tar archive of the specified file in the specified directory.
