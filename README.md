@@ -384,3 +384,25 @@ This is a detailed documentation of Linux commands, including their usage, optio
     - `-f` flag stands for force.
   - `mv -b <source_file> <destination_file>`: Create a backup of the destination file before overwriting it.
     - `-b` flag stands for backup.
+
+  ## Module 10- Deleting files and directories:
+  
+  ### 1. The `rm` command:
+  - The `rm` command is used to delete files and directories.
+  - `rm <file_name>`: Delete the specified file.
+  - `rm -i <file_name>`: Prompt before deleting the file.
+    - `-i` flag stands for interactive.
+  - `rm -f <file_name>`: Force the deletion of the file without prompting.
+    - `-f` flag stands for force.
+  - `rm -r <directory_name>`: Recursively delete the specified directory and its contents.
+    - `-r` flag stands for recursive.
+  - `rm -v <file_name>`: Display a message when the file is deleted.
+    - `-v` flag stands for verbose.
+  - `rm -d <directory_name>`: Delete an empty directory.
+    - `-d` flag stands for directory.
+  - `rm -rf <directory_name>`: Recursively delete the specified directory and its contents without prompting.
+    - `-r` flag stands for recursive and `-f` flag stands for force.
+  - `rm -ir <directory_name>`: Prompt before deleting each file and directory in the specified directory.
+    - `-i` flag stands for interactive and `-r` flag stands for recursive.
+  - `rm -rf <directory_name>/*`: Recursively delete all files and directories within the specified directory without deleting the directory itself.
+  - `rm -rf <directory_name>/.`: Recursively delete all files and directories within the specified directory without deleting the directory itself.
