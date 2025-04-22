@@ -194,3 +194,38 @@ This is a detailed documentation of Linux commands, including their usage, optio
   - `kill`: Terminate a running process by its process ID (PID).
     - `kill <process_id>`: Terminate the specified process.
   
+  ## Module 4- The 'ls' command in depth:
+  - The `ls` command is used to list files and directories in the current directory or a specified directory.
+    - `ls` stands for list.
+  - `ls -l`: List files and directories with detailed information, including permissions, ownership, size, and modification date.
+    - `-l` flag stands for long listing or long format.
+  - `ls -a`: List all files and directories, including hidden files (those starting with a dot).
+    - `-a` flag stands for all.
+  - `ls -h`: Display file sizes in a human-readable format (e.g., KB, MB).
+    - `-h` flag stands for human-readable.
+  - `ls -R`: Recursively list files and directories in all subdirectories.
+    - `-R` flag stands for recursive.
+  - `ls -S`: Sort files and directories by size, with the largest first.
+    - `-S` flag stands for size.
+  - `ls -i`: Display the inode number of each file and directory.
+    - `-i` flag stands for inode.
+  - `ls -lt`: Sort files and directories by modification time, with the most recently modified first.
+    - `-lt` flag stands for long format and time.
+  - `ls -lu`: Sort files and directories by last access time, with the most recently accessed first.
+    - `-lu` flag stands for last access time.
+  - `ls -lc`: Sort files and directories by last status change time, with the most recently changed first.
+    - `-lc` flag stands for last change time.
+  - `ls -X`: Sort files and directories by extension.
+    - `-X` flag stands for extension.
+  - `ls -r`: Reverse the order of the listing.
+    - `-r` flag stands for reverse. 
+  - Original listing command without the alias:
+    > `\ls`: Run the `ls` command without any aliases or functions that may have been defined in the shell.
+  - Aliased `ls` command default colour coding:
+    > Blue: Directory.
+    > Green: Executable file.
+    > Red: Archive file.
+    > Cyan: Symbolic link.
+    > Yellow: Device file.
+    > Magenta: Image file.
+    > White: Text file.
