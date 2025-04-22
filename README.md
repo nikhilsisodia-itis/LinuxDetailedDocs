@@ -113,6 +113,7 @@ This is a detailed documentation of Linux commands, including their usage, optio
       - Relative paths are more convenient for navigating within the current directory.
 
 ## Module 3- Getting started with the Terminal:
+
 - #### Opening the Terminal.
   - To open the terminal, you can use the following methods:
     + Press `Ctrl + Alt + T` on your keyboard.
@@ -195,6 +196,7 @@ This is a detailed documentation of Linux commands, including their usage, optio
     - `kill <process_id>`: Terminate the specified process.
   
   ## Module 4- The 'ls' command in depth:
+
   - The `ls` command is used to list files and directories in the current directory or a specified directory.
     - `ls` stands for list.
   - `ls -l`: List files and directories with detailed information, including permissions, ownership, size, and modification date.
@@ -231,6 +233,7 @@ This is a detailed documentation of Linux commands, including their usage, optio
     > White: Text file.
 
   ## Module 5- File types in Linux:
+
   - In Linux, files are categorized into different types based on their content and purpose. The main file types are:
     > .log files: Log files.
     > .txt files: Text files.
@@ -254,6 +257,7 @@ This is a detailed documentation of Linux commands, including their usage, optio
     > `file <file_name>`: Display the file type of the specified file.
 
   ## Module 6- The 'cd' command in depth:
+
   - The `cd` command is used to change the current working directory in the terminal.
     - `cd` stands for change directory.
   - `cd <directory_path>`: Change to the specified directory.
@@ -264,6 +268,7 @@ This is a detailed documentation of Linux commands, including their usage, optio
   - `cd /`: Change to the root directory.
 
   ## Module 7- Viewing files:
+
   ### 1. The `cat` command:
     - The `cat` command is used to concatenate and display the contents of a file.
     - `cat <file_name>`: Display the contents of the specified file.
@@ -297,12 +302,12 @@ This is a detailed documentation of Linux commands, including their usage, optio
   - `more -c <file_name>`: Clear the screen before displaying the file.
   - `more -n <number_of_lines> <file_name>`: Display the specified number of lines at a time.
 
-  ### The `head` command:
+  ### 4. The `head` command:
   - The `head` command is used to display the first few lines of a file.
   - `head <file_name>`: Display the first 10 lines of the specified file.
   - `head -n <number_of_lines> <file_name>`: Display the specified number of lines from the beginning of the file.
 
-  ### The `tail` command:
+  ### 5. The `tail` command:
   - The `tail` command is used to display the last few lines of a file.
   - `tail <file_name>`: Display the last 10 lines of the specified file.
   - `tail -n <number_of_lines> <file_name>`: Display the specified number of lines from the end of the file.
@@ -312,3 +317,23 @@ This is a detailed documentation of Linux commands, including their usage, optio
   - `tail -v <file1> <file2>`: Display the contents of multiple files with the file names.
   - `tail -r <file_name>`: Display the contents of the file in reverse order.
   - `tail -s <number_of_lines> <file_name>`: Display the specified number of lines from the end of the file, skipping empty lines.
+
+  ## Module 8- Creating directories and files:
+
+  ### 1. The `mkdir` command:
+  - The `mkdir` command is used to create new directories.
+  - `mkdir <directory_name>`: Create a new directory with the specified name.
+  - `mkdir -p <directory_path>`: Create a directory and any necessary parent directories.
+  - `mkdir -v <directory_name>`: Display a message when the directory is created.
+  - `mkdir -m <permissions> <directory_name>`: Create a directory with the specified permissions.
+  - `mkdir -i <directory_name>`: Prompt before creating a directory if it already exists.
+
+  ### 2. The `touch` command:
+  - The `touch` command is used to create empty files or update the timestamp of existing files.
+  - `touch <file_name>`: Create an empty file with the specified name.
+  - `touch -a <file_name>`: Update the access time of the file.
+  - `touch -m <file_name>`: Update the modification time of the file.
+  - `touch -c <file_name>`: Do not create a new file if it does not exist.
+  - `touch -r <reference_file> <file_name>`: Set the timestamp of the file to match the reference file.
+  - `touch -d <date_time> <file_name>`: Set the timestamp of the file to the specified date and time.
+  - `touch -t <timestamp> <file_name>`: Set the timestamp of the file to the specified timestamp.
