@@ -262,3 +262,53 @@ This is a detailed documentation of Linux commands, including their usage, optio
   - `cd ~`: Move to the home directory.
   - `cd -`: Change to the previous directory.
   - `cd /`: Change to the root directory.
+
+  ## Module 7- Viewing files:
+  ### 1. The `cat` command:
+    - The `cat` command is used to concatenate and display the contents of a file.
+    - `cat <file_name>`: Display the contents of the specified file.
+    - The `cat` command is used to concatenate and display the contents of a file.
+    - `cat <file_name>`: Display the contents of the specified file.
+    - `cat -n <file_name>`: Display the contents of the file with line numbers.
+    - `cat <file1> <file2>`: Concatenate and display the contents of multiple files.
+    - `cat <file_name> > <output_file>`: Redirect the contents of the file to a new file.
+    - `cat <file_name> >> <output_file>`: Append the contents of the file to an existing file.
+    - `cat <file_name> | <command>`: Pipe the contents of the file to another command for further processing.
+
+  ### 2. The `less` command:
+    - less command: Display the contents of a file page by page.
+    - less -N option: Display the line numbers.
+    - less -X option: Do not clear the screen on exit.
+    - less -S option: Truncate long lines.
+    - ctrl + f: Move forward one page.
+    - ctrl + b: Move backward one page.
+    - g or <: Move to the beginning of the file.
+    - G or >: Move to the end of the file.
+    - / <pattern>: Search for a pattern.
+    - n: Move to the next occurrence of the pattern.
+    - N: Move to the previous occurrence of the pattern.
+    - q: Quit the less command.
+    - ? <pattern>: Search backward for a pattern.
+  
+  ### 3. The `more` command:
+  - The `more` command is used to view the contents of a file one screen at a time.
+  - `more <file_name>`: Display the contents of the specified file.
+  - `more -d <file_name>`: Display a message when the end of the file is reached.
+  - `more -c <file_name>`: Clear the screen before displaying the file.
+  - `more -n <number_of_lines> <file_name>`: Display the specified number of lines at a time.
+
+  ### The `head` command:
+  - The `head` command is used to display the first few lines of a file.
+  - `head <file_name>`: Display the first 10 lines of the specified file.
+  - `head -n <number_of_lines> <file_name>`: Display the specified number of lines from the beginning of the file.
+
+  ### The `tail` command:
+  - The `tail` command is used to display the last few lines of a file.
+  - `tail <file_name>`: Display the last 10 lines of the specified file.
+  - `tail -n <number_of_lines> <file_name>`: Display the specified number of lines from the end of the file.
+  - `tail -f <file_name>`: Continuously monitor the file for new lines as they are added (useful for log files).
+  - `tail -c <number_of_bytes> <file_name>`: Display the specified number of bytes from the end of the file.
+  - `tail -q <file1> <file2>`: Display the contents of multiple files without repeating the file names.
+  - `tail -v <file1> <file2>`: Display the contents of multiple files with the file names.
+  - `tail -r <file_name>`: Display the contents of the file in reverse order.
+  - `tail -s <number_of_lines> <file_name>`: Display the specified number of lines from the end of the file, skipping empty lines.
