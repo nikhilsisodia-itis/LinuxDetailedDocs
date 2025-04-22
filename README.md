@@ -443,3 +443,28 @@ This is a detailed documentation of Linux commands, including their usage, optio
   - `find <directory> -perm <permissions>`: Search for files with the specified permissions.
   - `find <directory> -user <username>`: Search for files owned by the specified user.
   - `find <directory> -group <groupname>`: Search for files owned by the specified group.
+
+  ## Module 12- The `grep` command:
+  
+  - The `grep` command is used to search for specific patterns in files or input streams.
+  - `grep <pattern> <file_name>`: Search for the specified pattern in the specified file.
+  - `grep -i <pattern> <file_name>`: Search for the specified pattern in the specified file, ignoring case.
+    - `-i` flag stands for ignore case.
+  - `grep -v <pattern> <file_name>`: Search for lines that do not match the specified pattern.
+    - `-v` flag stands for invert match.
+  - `grep -r <pattern> <directory>`: Recursively search for the specified pattern in all files within the specified directory.
+  - `grep -l <pattern> <file_name>`: Display the names of files that contain the specified pattern.
+    - `-l` flag stands for list.
+  - `grep -n <pattern> <file_name>`: Display the line numbers of lines that contain the specified pattern.
+    - `-n` flag stands for line number.
+  - `grep -c <pattern> <file_name>`: Count the number of lines that contain the specified pattern.
+    - `-c` flag stands for count.
+  - `grep -w <pattern> <file_name>`: Search for the specified pattern as a whole word.
+    - `-w` flag stands for whole word.
+  - `grep -x <pattern> <file_name>`: Search for lines that match the specified pattern exactly.
+    - `-x` flag stands for exact match.
+  - `grep -e <pattern> <file_name>`: Search for the specified pattern in the specified file, allowing for extended regular expressions.
+  - `grep -f <pattern_file> <file_name>`: Search for patterns specified in a file.
+    - `-f` flag stands for file.
+  - `grep -q <pattern> <file_name>`: Suppress output and return a success or failure status.
+    - `-q` flag stands for quiet.
