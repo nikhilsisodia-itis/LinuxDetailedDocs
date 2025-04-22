@@ -337,3 +337,50 @@ This is a detailed documentation of Linux commands, including their usage, optio
   - `touch -r <reference_file> <file_name>`: Set the timestamp of the file to match the reference file.
   - `touch -d <date_time> <file_name>`: Set the timestamp of the file to the specified date and time.
   - `touch -t <timestamp> <file_name>`: Set the timestamp of the file to the specified timestamp.
+
+  ## Module 9- Copying and moving files:
+
+  ### 1. The `cp` command:
+  - The `cp` command is used to copy files and directories.
+  - `cp <source_file> <destination_file>`: Copy the source file to the destination file.
+  - `cp -r <source_directory> <destination_directory>`: Copy the source directory and its contents to the destination directory.
+    - The `-r` flag stands for recursive, which means it will copy all files and subdirectories within the source directory.
+  - `cp -i <source_file> <destination_file>`: Prompt before overwriting an existing file.
+    - `-i` flag stands for interactive.
+  - `cp -u <source_file> <destination_file>`: Copy the source file only if it is newer than the destination file.
+    - `-u` flag stands for update.
+  - `cp -v <source_file> <destination_file>`: Display a message when the file is copied.
+    - `-v` flag stands for verbose.
+  - `cp -a <source_file> <destination_file>`: Copy the file and preserve its attributes (permissions, timestamps, etc.).
+    - `-a` flag stands for archive.
+  - `cp -l <source_file> <destination_file>`: Create a hard link to the source file instead of copying it.
+    - `-l` flag stands for link.
+  - `cp -s <source_file> <destination_file>`: Create a symbolic link to the source file instead of copying it.
+    - `-s` flag stands for symbolic link.
+  - `cp -n <source_file> <destination_file>`: Do not overwrite an existing file.
+    - `-n` flag stands for no clobber.
+  - `cp -p <source_file> <destination_file>`: Preserve the file attributes (permissions, timestamps, etc.) when copying.
+    - `-p` flag stands for preserve.
+  - `cp -x <source_directory> <destination_directory>`: Copy only files from the same file system.
+    - `-x` flag stands for one file system.
+  - `cp -z <source_file> <destination_file>`: Compress the file while copying.
+    - `-z` flag stands for compress.
+
+  ### 2. The `mv` command:
+  - The `mv` command is used to move or rename files and directories.
+  - `mv <source_file> <destination_file>`: Move the source file to the destination file.
+  - `mv <source_file> <destination_directory>`: Move the source file to the specified directory.
+  - `mv <source_directory> <destination_directory>`: Move the source directory and its contents to the destination directory.
+  - `mv -i <source_file> <destination_file>`: Prompt before overwriting an existing file.
+    - `-i` flag stands for interactive.
+  - `mv -u <source_file> <destination_file>`: Move the source file only if it is newer than the destination file.
+    - `-u` flag stands for update.
+  - `mv -v <source_file> <destination_file>`: Display a message when the file is moved.
+    - `-v` flag stands for verbose.
+  - `mv -n <source_file> <destination_file>`: Do not overwrite an existing file.
+    - `-n` flag stands for no clobber.
+  - `mv -p <source_file> <destination_file>`: Preserve the file attributes (permissions, timestamps, etc.) when moving.
+  - `mv -f <source_file> <destination_file>`: Force the move operation without prompting.
+    - `-f` flag stands for force.
+  - `mv -b <source_file> <destination_file>`: Create a backup of the destination file before overwriting it.
+    - `-b` flag stands for backup.
