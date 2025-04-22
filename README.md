@@ -229,3 +229,26 @@ This is a detailed documentation of Linux commands, including their usage, optio
     > Yellow: Device file.
     > Magenta: Image file.
     > White: Text file.
+
+  ## Module 5- File types in Linux:
+  - In Linux, files are categorized into different types based on their content and purpose. The main file types are:
+    > .log files: Log files.
+    > .txt files: Text files.
+    > .conf files: Configuration files.
+    > .sh files: Shell script files.
+    > '-' denotes a regular file.
+    > 'd' denotes a directory.
+    > 'l' denotes a symbolic link.
+    > 'c' denotes a character device file.
+    > 'b' denotes a block device file.
+    > 's' denotes a socket file.
+    > 'p' denotes a named pipe file.
+    > ls -F option: Display the file types.
+    > '/' indicates a directory.
+    > '@' indicates a symbolic link.
+    > '|' indicates a named pipe file.
+    > '*' indicates an executable file.
+    > '=' indicates a socket file.
+    > ' ' indicates a regular file.
+  - To check the file type of a file, you can use the `file` command:
+    > `file <file_name>`: Display the file type of the specified file.
