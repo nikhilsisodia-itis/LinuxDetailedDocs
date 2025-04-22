@@ -252,3 +252,13 @@ This is a detailed documentation of Linux commands, including their usage, optio
     > ' ' indicates a regular file.
   - To check the file type of a file, you can use the `file` command:
     > `file <file_name>`: Display the file type of the specified file.
+
+  ## Module 6- The 'cd' command in depth:
+  - The `cd` command is used to change the current working directory in the terminal.
+    - `cd` stands for change directory.
+  - `cd <directory_path>`: Change to the specified directory.
+    - The path can be absolute or relative.
+  - `cd ..`: Move to the parent directory.
+  - `cd ~`: Move to the home directory.
+  - `cd -`: Change to the previous directory.
+  - `cd /`: Change to the root directory.
