@@ -468,3 +468,36 @@ This is a detailed documentation of Linux commands, including their usage, optio
     - `-f` flag stands for file.
   - `grep -q <pattern> <file_name>`: Suppress output and return a success or failure status.
     - `-q` flag stands for quiet.
+
+  ## Module 13- Comparing files:
+
+  ### 1. The `diff` command:
+  - The `diff` command is used to compare two files line by line and display the differences between them.
+  - `diff <file1> <file2>`: Compare the two specified files and display the differences.
+  - `diff -u <file1> <file2>`: Display the differences in unified format, which shows a few lines of context around the changes.
+    - `-u` flag stands for unified.
+  - `diff -c <file1> <file2>`: Display the differences in context format, which shows the differences with surrounding lines.
+    - `-c` flag stands for context.
+  - `diff -i <file1> <file2>`: Ignore case differences when comparing the files.
+    - `-i` flag stands for ignore case.
+  - `diff -w <file1> <file2>`: Ignore whitespace differences when comparing the files.
+    - `-w` flag stands for ignore whitespace.
+  - `diff -b <file1> <file2>`: Ignore changes in the amount of whitespace when comparing the files.
+    - `-b` flag stands for ignore space.
+  - `diff -q <file1> <file2>`: Display only whether the files differ, without showing the actual differences.
+    - `-q` flag stands for quiet.
+  - `diff -r <directory1> <directory2>`: Recursively compare two directories and display the differences between their contents.
+  - `diff -s <file1> <file2>`: Display a message if the files are the same.
+    - `-s` flag stands for report identical files.
+
+  ### 2. The `cmp` command:
+  - The `cmp` command is used to compare two files byte by byte and display the first difference found.
+  - `cmp <file1> <file2>`: Compare the two specified files and display the first difference found.
+  - `cmp -l <file1> <file2>`: Display the byte numbers and values of the differences found.
+    - `-l` flag stands for list.
+  - `cmp -s <file1> <file2>`: Suppress output and return a success or failure status.
+    - `-s` flag stands for silent.
+  - `cmp -i <offset> <file1> <file2>`: Start comparing the files at the specified byte offset.
+    - `-i` flag stands for ignore.
+  - `cmp -n <number_of_bytes> <file1> <file2>`: Compare only the specified number of bytes from the beginning of the files.
+    - `-n` flag stands for number.
