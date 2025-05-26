@@ -522,3 +522,26 @@ This is a detailed documentation of Linux commands, including their usage, optio
   - `tar -xzvf <archive_name> -C <directory_name>`: Extract a compressed tar archive to a specified directory.
   - `tar -cvf <archive_name> <file_name> -C <directory_path>`: Create a tar archive of the specified file in the specified directory.
   - `tar -czvf <archive_name> <file_name> -C <directory_path>`: Create a compressed tar archive of the specified file in the specified directory.
+
+## Module 15- Inode & Links:
+  - An Inode is a Data Structure that stores the metadata of a file.
+  - Inodes contain information such as file permissions, ownership, timestamps, and the location of the file's data blocks on the disk.
+  - Each file and directory in a Linux file system has a unique inode number.
+  - `ls -i <file_name>`: Display the inode number.
+  - `ls -i`: Display the inode numbers of all files in the current directory.
+  
+  - Links in Linux are pointers to files or directories.
+  - There are two types of links:
+
+    - Hard Links: A hard link is a direct reference to the inode of a file. It allows multiple filenames to refer to the same file data on disk.
+      - Shares the same inode number as the original file.
+      - Does not break if the original file is deleted, as long as at least one hard link remains.
+      - `ln <source_file> <link_name>`: Create a hard link to the specified file.
+      - Hard links cannot span different file systems and cannot be created for directories.
+
+    - Symbolic Links (Symlinks): A symbolic link is a special file that points to another file or directory by its path.
+      - It is like a shortcut to the target file or directory.
+      - It contains a reference to the target file or directory's path.
+      - If the target file is deleted, the symlink becomes broken (dangling) and no longer points to a valid file.
+      - `ln -s <target_file> <link_name>`: Create a symbolic link to the specified file or directory.
+      - Symlinks can span different file systems and can point to directories.
