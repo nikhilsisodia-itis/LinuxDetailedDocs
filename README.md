@@ -619,7 +619,7 @@ This is a detailed documentation of Linux commands, including their usage, optio
     - `sudo su <username>`: Switch to another user account with superuser privileges.
     - `sudo -i -u <username>`: Switch to the specified user with root privileges
 
-  ## Group Management:
+  ## Module 17- Group Management:
   - Groups in Linux are used to manage permissions and access control for multiple users.
   - Each user can belong to one or more groups, and each group can have multiple users.
   - The main configuration file for groups is `/etc/group`, which contains information about each group, including the group name, group ID (GID), and members of the group.
@@ -649,5 +649,5 @@ This is a detailed documentation of Linux commands, including their usage, optio
   - Deleting a Group:
     - `groupdel <groupname>`: Delete an existing group.
     - `groupdel -f <groupname>`: Forcefully delete a group, even if it has members.
-  - `groupdel -r <groupname>`: Delete a group and remove its home directory if it exists.
-  - `groupdel -f -r <groupname>`: Forcefully delete a group and remove its home directory if it exists.
+    - `groupdel -r <groupname>`: Delete a group and remove its home directory if it exists.
+    - `groupdel -f -r <groupname>`: Forcefully delete a group and remove its home directory if it exists.
