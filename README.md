@@ -523,7 +523,7 @@ This is a detailed documentation of Linux commands, including their usage, optio
   - `tar -cvf <archive_name> <file_name> -C <directory_path>`: Create a tar archive of the specified file in the specified directory.
   - `tar -czvf <archive_name> <file_name> -C <directory_path>`: Create a compressed tar archive of the specified file in the specified directory.
 
-## Module 15- Inode & Links:
+  ## Module 15- Inode & Links:
   - An Inode is a Data Structure that stores the metadata of a file.
   - Inodes contain information such as file permissions, ownership, timestamps, and the location of the file's data blocks on the disk.
   - Each file and directory in a Linux file system has a unique inode number.
@@ -545,3 +545,60 @@ This is a detailed documentation of Linux commands, including their usage, optio
       - If the target file is deleted, the symlink becomes broken (dangling) and no longer points to a valid file.
       - `ln -s <target_file> <link_name>`: Create a symbolic link to the specified file or directory.
       - Symlinks can span different file systems and can point to directories.
+
+  ## Module 16- User Account Management:
+  - User account management in Linux involves creating, modifying, and deleting user accounts and managing their permissions and groups.
+  - User accounts are used to authenticate and authorize users to access the system and perform actions based on their permissions.
+  - Each user account has a unique username and user ID (UID) associated with it.
+  - User accounts can be created, modified, and deleted using various commands and configuration files.
+  - The main configuration file for user accounts is `/etc/passwd`, which contains information about each user account, including the username, UID, home directory, and shell.
+  - The `/etc/shadow` file contains encrypted passwords and additional security information for user accounts.
+  - Fields of `/etc/passwd` file:
+    - Username: The name of the user account.
+    - Password: An 'x' indicates that the password is stored in the `/etc/shadow` file.
+    - User ID (UID): A unique numeric identifier for the user.
+    - Group ID (GID): The primary group ID for the user.
+    - User Info: Additional information about the user, such as full name or description.
+    - Home Directory: The path to the user's home directory.
+    - Shell: The default shell for the user.
+
+  <br>
+
+  - Adding or Creating a User(s):
+    - `useradd <username>`: Add a new user.
+    - `useradd -m <username>`: Add a new user with a home directory.
+    - `useradd -d <directory> <username>`: Add a new user with a specific home directory.
+    - `useradd -c <comment> <username>`: Add a new user with a comment.
+    - `useradd -g <groupname> <username>`: Add a new user to a specific group.
+    - `useradd -G <groupname> <username>`: Add a new user to a secondary group.
+    - `useradd -s <shell> <username>`: Add a new user with a specific shell.
+    - `useradd -p <password> <username>`: Add a new user with a password.
+    - `useradd -u <uid> <username>`: Add a new user with a specific user ID.
+    - `useradd -e <expiry_date> <username>`: Add a new user with an expiry date.
+    - `useradd -f <inactive_days> <username>`: Add a new user with an inactive days.
+    - `useradd -e <expiry_date> -f <inactive_days> -p <password> <username>`: Add a new user with an expiry date, inactive days, and password.
+    - `useradd -m -s <shell> -c <comment> -p <hasehd_password> -u <uid> <username>` : Add a new user with a home directory, shell, comment, hashed password, and user id.
+
+    <br>
+
+  - Creating a user password:
+    - Use `openssl passwd -6 <password>` to generate a secure password hash.
+     - Use `useradd -p <hashed_password> <username>` to create a user with the hashed password.
+
+    <br>
+
+  - Modifying a User:
+    - `usermod <username>`: Modify an existing user account.
+    - `usermod -l <new_username> <old_username>`: Change the username of an existing user.
+    - `usermod -d <new_home_directory> <username>`: Change the home directory of an existing user.
+    - `usermod -s <new_shell> <username>`: Change the default shell for an existing user.
+    - `usermod -c <new_comment> <username>`: Change the comment for an existing user.
+    - `usermod -g <new_group> <username>`: Change the primary group for an existing user.
+    - `usermod -G <new_secondary_group> <username>`: Add or remove secondary groups for an existing user.
+    - `usermod -aG <groupname> <username>`: Add a user to a secondary group without removing them from other groups.
+    - `usermod -u <new_uid> <username>`: Change the user ID (UID) of an existing user.
+    - `usermod -e <expiry_date> <username>`: Set an expiry date for an existing user account.
+    - `usermod -f <inactive_days> <username>`: Set the number of days after which the user account becomes inactive.
+    - `usermod -L <username>`: Lock the user account, preventing login.
+    - `usermod -U <username>`: Unlock a locked user account.
+    - `usermod -p <hashed_password> <username>`: Change the password for an existing user using a hashed password.
