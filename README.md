@@ -579,13 +579,13 @@ This is a detailed documentation of Linux commands, including their usage, optio
     - `useradd -e <expiry_date> -f <inactive_days> -p <password> <username>`: Add a new user with an expiry date, inactive days, and password.
     - `useradd -m -s <shell> -c <comment> -p <hasehd_password> -u <uid> <username>` : Add a new user with a home directory, shell, comment, hashed password, and user id.
 
-    <br>
+  <br>
 
   - Creating a user password:
     - Use `openssl passwd -6 <password>` to generate a secure password hash.
      - Use `useradd -p <hashed_password> <username>` to create a user with the hashed password.
 
-    <br>
+  <br>
 
   - Modifying a User:
     - `usermod <username>`: Modify an existing user account.
@@ -602,3 +602,52 @@ This is a detailed documentation of Linux commands, including their usage, optio
     - `usermod -L <username>`: Lock the user account, preventing login.
     - `usermod -U <username>`: Unlock a locked user account.
     - `usermod -p <hashed_password> <username>`: Change the password for an existing user using a hashed password.
+
+  <br>
+
+  - Deleting a User:
+    - `userdel <username>`: Delete an existing user account.
+    - `userdel -r <username>`: Delete an existing user account and remove their home directory and files.
+    - `userdel -f <username>`: Forcefully delete a user account, even if they are logged in.
+
+  <br>
+
+  - Switch to a User:
+    - `su <username>`: Switch to another user account.
+    - `su - <username>`: Switch to another user account and load their environment variables.
+    - `su -l <username>`: Same as `su -`, switch to another user account and load their environment variables.
+    - `sudo su <username>`: Switch to another user account with superuser privileges.
+    - `sudo -i -u <username>`: Switch to the specified user with root privileges
+
+  ## Group Management:
+  - Groups in Linux are used to manage permissions and access control for multiple users.
+  - Each user can belong to one or more groups, and each group can have multiple users.
+  - The main configuration file for groups is `/etc/group`, which contains information about each group, including the group name, group ID (GID), and members of the group.
+  - Fields of `/etc/group` file:
+    - Group Name: The name of the group.
+    - Password: An 'x' indicates that the password is stored in the `/etc/gshadow` file.
+    - Group ID (GID): A unique numeric identifier for the group.
+    - Group Members: A comma-separated list of users who are members of the group.
+
+  <br>
+
+  - Adding or Creating a Group:
+    - `groupadd <groupname>`: Add a new group.
+    - `groupadd -g <gid> <groupname>`: Add a new group with a specific group ID (GID).
+
+  <br>
+
+  - Modifying a Group:
+    - `groupmod <groupname>`: Modify an existing group.
+    - `groupmod -n <new_groupname> <old_groupname>`: Change the name of an existing group.
+    - `groupmod -g <new_gid> <groupname>`: Change the group ID (GID) of an existing group.
+    - `groupmod -A <user1,user2,...> <groupname>`: Add users to an existing group.
+    - `groupmod -R <user1,user2,...> <groupname>`: Remove users from an existing group.
+
+  <br>
+
+  - Deleting a Group:
+    - `groupdel <groupname>`: Delete an existing group.
+    - `groupdel -f <groupname>`: Forcefully delete a group, even if it has members.
+  - `groupdel -r <groupname>`: Delete a group and remove its home directory if it exists.
+  - `groupdel -f -r <groupname>`: Forcefully delete a group and remove its home directory if it exists.
