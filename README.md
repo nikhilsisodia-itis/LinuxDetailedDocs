@@ -708,4 +708,13 @@ This is a detailed documentation of Linux commands, including their usage, optio
 
   <br>
 
-  
+  ## Module 20- UMASK:
+  - Umask is a three-digit octal number that sets the default file permissions.
+  - Umask is subtracted from the maximum permission to get the default permission.
+  - The default umask value is 0022.
+    - `umask command`: Display the umask value.
+    - `umask <value>`: Set the umask value.
+    - `umask -S`: Display the umask value in symbolic notation.
+    - `umask -p`: Display the umask value in octal notation.
+    - `umask -S <value>`: Set the umask value in symbolic notation.
+    - `umask -p <value>`: Set the umask value in octal notation.
