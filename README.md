@@ -839,7 +839,7 @@ This is a detailed documentation of Linux commands, including their usage, optio
 
   <br>
 
-  - NetowrkManager Commands:
+  - NetworkManager Commands:
     - `systemctl status NetworkManager`: Display the status of the NetworkManager service.
     - `systemctl start NetworkManager`: Start the NetworkManager service.
     - `systemctl stop NetworkManager`: Stop the NetworkManager service.
