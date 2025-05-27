@@ -865,42 +865,42 @@ This is a detailed documentation of Linux commands, including their usage, optio
     - Check whether SSH is installed or not using the following command:
     - `ssh -V`: Show the version and details of the ssh. If it is not installed, you will see an error message like `command not found`.
 
-    <br>
+  <br>
 
-    - Installing SSH:
-      - Debian/Ubuntu-based systems:
-        - Install the OpenSSH client and server:
-        - `sudo apt update`
-        - `sudo apt install openssh-client openssh-server`
-        - Start and enable the SSH service:
-        - `sudo systemctl start ssh`
-        - `sudo systemctl enable ssh`
+  - Installing SSH:
+    - Debian/Ubuntu-based systems:
+      - Install the OpenSSH client and server:
+      - `sudo apt update`
+      - `sudo apt install openssh-client openssh-server`
+      - Start and enable the SSH service:
+      - `sudo systemctl start ssh`
+      - `sudo systemctl enable ssh`
       
-      - RHEL/CentOS/Fedora-based Systems:
-        - Install the OpenSSH client and server:
-        - `sudo dnf install openssh-clients openssh-server`
-        - Start and enable the SSH service:
-        - `sudo systemctl start ssh`
-        - `sudo systemctl enable ssh`
+    - RHEL/CentOS/Fedora-based Systems:
+      - Install the OpenSSH client and server:
+      - `sudo dnf install openss-clients openss-server`
+      - Start and enable the SSH service:
+      - `sudo systemctl start ssh`
+      - `sudo systemctl enable ssh`
 
-      - Arch Linux:
-        - Install the OpenSSH client and server:
-        - `sudo pacman -S openssh`
-        - Start and enable the SSH service:
-        - `sudo systemctl start sshd`
-        - `sudo systemctl enable sshd`
+    - Arch Linux:
+      - Install the OpenSSH client and server:
+      - `sudo pacman-S openssh`
+      - Start and enable the SSH service:
+      - `sudo systemctl start sshd`
+      - `sudo systemctl enable sshd`
 
-      - Check the stauts:
-        - `sudo systemctl status sshd`
+    - Check the stauts:
+      - `sudo systemctl status sshd`
 
     <br>
 
-    - `ssh username@remote_host_ip_address`: Connect to a remote server, Enter password prompt will be displayed, enter the remote host's password to connect.
-    - `ssh -p 2222 username@remote_host_ip_address`: Connect to a remote server, on the specified port.
-    - `ssh-keygen -t ed25519 -C "your_email@example.com"`: Create a public-private key pair.
-    - #### Generates a Ed25519 key pair. By default, keys are stored in ~/.ssh/id_rsa (private) and ~/.ssh/id_rsa.pub (public).
-    - `ssh-copy-id username@remote_host_ip_address`: Copy the public key on the remote server.
-    - `ssh username@remote_host`: Now, SSH will use your private key for authentication, and you won’t be prompted for a password.
+      - `ssh username@remote_host_ip_address`: Connect to a remote server, Enter password prompt will be displayed, enter the remote host's password to connect.
+      - `ssh -p 2222 username@remote_host_ip_address`: Connect to a remote server, on the specified port.
+      - `ssh-keygen -t ed25519 -C "your_email@example.com"`: Create a public-private key pair.
+      - #### Generates a Ed25519 key pair. By default, keys are stored in ~/.ssh/id_rsa (private) and ~/.ssh/id_rsa.pub (public).
+      - `ssh-copy-id username@remote_host_ip_address`: Copy the public key on the remote server.
+      - `ssh username@remote_host`: Now, SSH will use your private key for authentication, and you won’t be prompted for a password.
 
     <br>
 
@@ -1029,3 +1029,46 @@ This is a detailed documentation of Linux commands, including their usage, optio
       - `telnet -v <hostname>`: Display the verbose output.
       - `telnet -V <hostname>`: Display the version information.
       - `telnet -z <hostname>`: Display the telnet status.
+
+  ## Module 23- Software Management:
+  - Software Management is the process of installing, updating, and removing software.
+  - Types:
+    - `dpkg`:
+      - `dpkg` command: Install, remove, and manage Debian packages.
+      - `dpkg --get-selections`: Display the installed packages.        
+      - `dpkg -i <package_name>`: Install a package.
+      - `dpkg -r <package_name>`: Remove a package.
+      - `dpkg -P <package_name>`: Purge a package.
+      - `dpkg -l`: List all the packages.
+      - `dpkg -l <package_name>`: List a specific package.
+      - `dpkg -s <package_name>`: Display the status of a package.
+      - `dpkg -L <package_name>`: List the files of a package.
+      - `dpkg -S <file_name>`: Display the package that owns the file.
+      - `dpkg -I <package_name>`: Display the information of a package.
+      - `dpkg -c <package_name>`: Display the contents of a package.
+      - `dpkg -X <package_name> <directory>`: Extract the contents of a package.
+      - `dpkg -e <package_name>`: Extract the control files of a package.  
+
+    <br>
+
+    - `apt`:
+      - `apt` - Advanced Package Tool.
+      - `apt` is a package manager for Debian-based systems.
+      - `apt` is used to install, update, and remove packages.
+      - `PPAs` - Personal Package Archives.   
+    - Important `apt` commands:
+      - `sudo apt update`: Update the package list.
+      - `sudo apt install <package-name>`: Install a package.
+      - `sudo apt remove <package-name>`: Only removes a package.
+      - `sudo apt purge <package-name>`: Removes a package and the package's configuration files.
+      - `sudo apt upgrade`: Upgrade the packages.
+      - `sudo apt full-upgrade`: Upgrade the packages with the removal of obsolete packages.
+      - `sudo apt autoremove`: Remove the obsolete packages.
+      - `sudo apt search <package-name>`: Search for a package.
+      - `sudo apt show <package-name>`: Display the information of a package.
+      - `sudo apt list --installed`: List the installed packages.
+      - `sudo apt list --upgradable`: List the upgradable packages.
+      - `sudo apt install <path-to-the-file>`: Install a package from a file.
+      - `sudo apt autoclean`: Clean the package cache.
+
+   
