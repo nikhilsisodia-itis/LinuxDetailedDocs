@@ -363,8 +363,6 @@ This is a detailed documentation of Linux commands, including their usage, optio
     - `-p` flag stands for preserve.
   - `cp -x <source_directory> <destination_directory>`: Copy only files from the same file system.
     - `-x` flag stands for one file system.
-  - `cp -z <source_file> <destination_file>`: Compress the file while copying.
-    - `-z` flag stands for compress.
 
   ### 2. The `mv` command:
   - The `mv` command is used to move or rename files and directories.
