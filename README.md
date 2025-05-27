@@ -828,4 +828,204 @@ This is a detailed documentation of Linux commands, including their usage, optio
     - `ctrl + d`: Exit the shell.
     - `nohup <command>`: Run a command that does not terminate when the shell is closed.
 
-  
+  ## Module 22- Networking:
+  - Networking is the practice of connecting computers and other devices to share resources.
+  - Networking is used to share files, printers, and internet connections.
+  - Networking is used to communicate with other devices.
+  - Networking is used to access remote resources.
+  - Networking is used to access the internet.
+  - /etc/netplan: Network configuration directory.
+  - Network manager is used to manage the network configuration.
+
+  <br>
+
+  - NetowrkManager Commands:
+    - `systemctl status NetworkManager`: Display the status of the NetworkManager service.
+    - `systemctl start NetworkManager`: Start the NetworkManager service.
+    - `systemctl stop NetworkManager`: Stop the NetworkManager service.
+    - `systemctl restart NetworkManager`: Restart the NetworkManager service.
+
+  <br>
+
+  - SSH:
+  - SSH (Secure Shell) is a cryptographic network protocol used to securely connect to remote computers over an unsecured network.
+  - It provides strong authentication and encrypted data communications between two computers, typically used for remote login, command execution, and file transfers.
+  - Default port: 22.
+
+  <br>
+
+  - How SSH works?
+    - Client-Server Model: You run an SSH client on your local machine to connect to an SSH server (sshd) on the remote machine.
+    - Encryption: All data (including passwords) is encrypted, preventing eavesdropping.
+    - Authentication: Can be done via password or public/private key pairs.
+
+  <br>
+
+  - How to use SSH?
+    - Check whether SSH is installed or not using the following command:
+    - `ssh -V`: Show the version and details of the ssh. If it is not installed, you will see an error message like `command not found`.
+
+    <br>
+
+    - Installing SSH:
+      - Debian/Ubuntu-based systems:
+        - Install the OpenSSH client and server:
+        - `sudo apt update`
+        - `sudo apt install openssh-client openssh-server`
+        - Start and enable the SSH service:
+        - `sudo systemctl start ssh`
+        - `sudo systemctl enable ssh`
+      
+      - RHEL/CentOS/Fedora-based Systems:
+        - Install the OpenSSH client and server:
+        - `sudo dnf install openssh-clients openssh-server`
+        - Start and enable the SSH service:
+        - `sudo systemctl start ssh`
+        - `sudo systemctl enable ssh`
+
+      - Arch Linux:
+        - Install the OpenSSH client and server:
+        - `sudo pacman -S openssh`
+        - Start and enable the SSH service:
+        - `sudo systemctl start sshd`
+        - `sudo systemctl enable sshd`
+
+      - Check the stauts:
+        - `sudo systemctl status sshd`
+
+    <br>
+
+    - `ssh username@remote_host_ip_address`: Connect to a remote server, Enter password prompt will be displayed, enter the remote host's password to connect.
+    - `ssh -p 2222 username@remote_host_ip_address`: Connect to a remote server, on the specified port.
+    - `ssh-keygen -t ed25519 -C "your_email@example.com"`: Create a public-private key pair.
+    - #### Generates a Ed25519 key pair. By default, keys are stored in ~/.ssh/id_rsa (private) and ~/.ssh/id_rsa.pub (public).
+    - `ssh-copy-id username@remote_host_ip_address`: Copy the public key on the remote server.
+    - `ssh username@remote_host`: Now, SSH will use your private key for authentication, and you won’t be prompted for a password.
+
+    <br>
+
+    - Disable Password Authentication and enable Public Key Authentication for SSH:
+      - Edit the SSH Configuration File: Open the SSH server configuration file (/etc/ssh/sshd_config) using a text editor.
+      - `sudo nano /etc/ssh/sshd_config`
+      - Disable Password Authentication: Locate the following line: `#PasswordAuthentication yes`.
+      - Uncomment it (remove the #) and change yes to no: `PasswordAuthentication no`.
+      - Enable Public Key Authentication: Ensure the following line is present and uncommented: `PubkeyAuthentication yes`.
+      - Restart the SSH Service: Save the file and restart the SSH service to apply the changes: `sudo systemctl restart sshd`.
+      - #### Note: Ensure you have set up SSH key-based authentication before disabling password authentication to avoid locking yourself out.
+
+    <br>
+
+    - System Control Command:
+      - `systemctl status <service_name>`: Display the status of the <service_name> service.
+      - `systemctl start <service_name>`: Start the <service_name> service.
+      - `systemctl stop <service_name>`: Stop the <service_name> service.
+      - `systemctl restart <service_name>`: Restart the <service_name> service.
+      - `systemctl enable <service_name>`: Enable the <service_name> service.
+      - `systemctl disable <service_name>`: Disable the <service_name> service.
+
+    <br>
+
+    - SCP:
+    - Securely copy files between hosts.
+    - `scp` is a part of the openssh package.
+    - scp commands: 
+      - `scp <source> <destination>`: Copy files between hosts.
+      - `scp -r <source> <destination>`: Copy directories between hosts.
+      - `scp -v <source> <destination>`: Copy files between hosts verbosely.
+      - `scp -P <port> <source> <destination>`: Copy files between hosts using a specific port.
+      - `scp -i <identity_file> <source> <destination>`: Copy files between hosts using an identity file.
+      - `scp -l <limit> <source> <destination>`: Copy files between hosts using a bandwidth limit.
+      - `scp -C <source> <destination>`: Copy files between hosts using compression.
+      - `scp -p <source> <destination>`: Copy files between hosts preserving the file attributes.
+      - `scp -q <source> <destination>`: Copy files between hosts quietly.
+      - `scp -r -v -P -i -l -C -p -q <source> <destination>`: Copy files between hosts recursively, verbosely, using a specific port, using an identity file, using a bandwidth limit, using compression, preserving the file attributes, and quietly. 
+
+    <br>
+
+    - SFTP:
+    - `sftp` command: Securely transfer files between hosts.
+    - `sftp` is a part of the openssh package.
+    - sftp commands:
+      - `sftp <username>@<hostname>`: Connect to a host.
+      - `sftp -P <port> <username>@<hostname>`: Connect to a host using a specific port.
+      - `sftp -i <identity_file> <username>@<hostname>`: Connect to a host using an identity file.
+      - `sftp -b <batch_file> <username>@<hostname>`: Connect to a host using a batch file.
+      - `sftp -v <username>@<hostname>`: Connect to a host verbosely.
+      - `sftp -q <username>@<hostname>`: Connect to a host quietly.
+      - `sftp -r <source> <destination>`: Transfer files between hosts recursively.
+      - `sftp -P -i -b -v -q -r <port> <identity_file> <batch_file> <username>@<hostname>`: Connect to a host using a specific port, using an identity file, using a batch file, verbosely, quietly, and transfer files between hosts recursively.
+
+    <br>
+
+    - RSYNC:
+    - `rsync` command: Securely copy files between hosts.
+    - `rsync` is a part of the rsync package.
+      - `rsync <source> <destination>`: Copy files between hosts.
+      - `rsync -a <source> <destination>`: Copy files between hosts preserving the file attributes.
+      - `rsync -r <source> <destination>`: Copy directories between hosts.
+      - `rsync -v <source> <destination>`: Copy files between hosts verbosely.
+      - `rsync -z <source> <destination>`: Copy files between hosts using compression.
+      - `rsync -P <source> <destination>`: Copy files between hosts using partial transfer.
+      - `rsync -l <source> <destination>`: Copy files between hosts using symbolic links.
+      - `rsync -t <source> <destination>`: Copy files between hosts preserving the modification times.
+      - `rsync -r -v -z -a -P -l -t <source> <destination>`: Copy files between hosts recursively, verbosely, using compression, preserving the file attributes, using partial transfer, using symbolic links, and preserving the modification times.
+    - Using rysn over the network:
+      - `rsync -avz -e "ssh -p <port>" <source> <username>@<hostname>:<destination>`: Copy files between hosts using rsync over the network.
+      - `rsync -avz -e "ssh -p <port>" <username>@<hostname>:<source> <destination>`: Copy files between hosts using rsync over the network.
+
+    <br>
+
+    - WGET:
+    - `wget` command: Download files from the internet.
+      - `wget <URL>`: Download files from the internet.
+      - `wget -c <URL>`: Resume the download.
+      - `wget -b <URL>`: Download files in the background.
+      - `wget -q <URL>`: Download files quietly.
+      - `wget -O <file_name> <URL>`: Download files with a specific name.
+      - `wget -P <directory> <URL>`: Download files to a specific directory.
+      - `wget -r <URL>`: Download files recursively.
+      - `wget -np <URL>`: Download files recursively without going to the parent directory.
+      - `wget -m <URL>`: Download files recursively with mirroring.
+      - `wget -k <URL>`: Download files recursively and convert the links.
+      - `wget -l <level> <URL>`: Download files recursively up to a specific level.
+      - `wget -A <pattern> <URL>`: Download files recursively with a specific pattern.
+      - `wget -R <pattern> <URL>`: Download files recursively without a specific pattern.
+      - `wget -i <file_name>`: Download files from a file.
+
+    <br>
+
+    - IFCONFIG & IP:
+    - `ifconfig` command: Display the network configuration.
+      - `ifconfig -a`: Display all the network configuration.
+    - `ip command`: Display the network configuration.
+      - `ip addr show`: Display the network configuration.
+      - `ip -4 addr show`: Display the IPv4 network configuration.
+      - `ip -6 addr show`: Display the IPv6 network configuration.
+
+    <br>
+
+    - Checking for listening ports:
+    - `netstat` command: Display the network statistics.
+      - `netstat -tuln`: Display the listening ports.
+      - `netstat -tupan`: Display the listening ports with the process ID.
+      - `netstat -tuln | grep <port_number>`: Display the listening ports of a specific port.
+      - `netstat -tupan | grep <port_number>`: Display the listening ports of a specific port with the process ID.
+    - `ss command`: Display the network statistics.
+      - `ss -tuln`: Display the listening ports.
+      - `ss -tuln | grep <port_number>`: Display the listening ports of a specific port.
+      - `0.0.0.0 in the local address of netstat command indicates all the IPv4 interfaces.
+      - `::: in the local address of netstat command indicates all the IPv6 interfaces.
+
+    <br>
+
+    - TELNET:
+    - `telnet` command: Connect to a host.
+      - `telnet <hostname>`: Connect to a host.
+      - `telnet <hostname> <port>`: Connect to a host using a specific port.
+      - `telnet -l <username> <hostname>`: Connect to a host using a specific username.
+      - `telnet -a <hostname>`: Connect to a host using the IPv4 address.
+      - `telnet -6 <hostname>`: Connect to a host using the IPv6 address.
+      - `telnet -L <hostname>`: Enable the SSL authentication.
+      - `telnet -v <hostname>`: Display the verbose output.
+      - `telnet -V <hostname>`: Display the version information.
+      - `telnet -z <hostname>`: Display the telnet status.
