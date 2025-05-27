@@ -649,5 +649,47 @@ This is a detailed documentation of Linux commands, including their usage, optio
   - Deleting a Group:
     - `groupdel <groupname>`: Delete an existing group.
     - `groupdel -f <groupname>`: Forcefully delete a group, even if it has members.
-    - `groupdel -r <groupname>`: Delete a group and remove its home directory if it exists.
-    - `groupdel -f -r <groupname>`: Forcefully delete a group and remove its home directory if it exists.
+    
+  ## Module 18- File Permissions:
+  - File permissions OR modes specify the access rights to files & directories.
+  - By default, the owner of the file has read, write, and execute permissions.
+  - A directory or file has three permissions modes:
+    - Read (r): The file can be read.
+    - Write (w): The file can be written.
+    - Execute (x): The file can be executed.
+
+  <br>
+
+  - The `Octal Numeric Notation` is a way to represent the file permissions using numbers.
+  - Each permission is represented by a number:
+    - Read (r): 4.
+    - Write (w): 2.
+    - Execute (x): 1.
+    - No permission (-): 0.
+
+  <br>
+
+  - Change file permission(s):
+    - `chmod` command: Change the file permission.
+    - `chmod <mode> <file_name>`: Change the file permissions.
+    - `chmod -R <mode> <directory_name>`: Change the file permissions recursively.
+    - `chmod -v <mode> <file_name>`: Change the file permissions verbosely.
+    - `chmod -c <mode> <file_name>`: Change the file permissions and display the changes.
+    - `chmod -f <mode> <file_name>`: Change the file permissions forcefully.
+    - `chmod -R -v -c -f <mode> <directory_name>`: Change the file permissions recursively, verbosely, and display the changes.
+    - `chmod a <operator> <permission> <file_name>`: Change the file permissions for all users.
+    - `chmod --reference <reference_file> <file_name>`: Change the file permissions to match the reference file.
+
+  <br>
+
+  - User category & operations:
+    - User Category:
+      - u: User.
+      - g: Group.
+      - o: Others.
+      - a: All.
+
+    - Operations:
+      - `+`: Add the permission.
+      - `-`: Remove the permission.
+      - `=`: Set the permission.
