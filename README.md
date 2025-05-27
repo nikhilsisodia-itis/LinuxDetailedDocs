@@ -718,3 +718,114 @@ This is a detailed documentation of Linux commands, including their usage, optio
     - `umask -p`: Display the umask value in octal notation.
     - `umask -S <value>`: Set the umask value in symbolic notation.
     - `umask -p <value>`: Set the umask value in octal notation.
+
+  ## Module 21- Process Management:
+  - Process:
+    - A running instance of a program is called a process.
+    - Process is an active entity.
+
+  <br>
+
+  - Process properties:
+    - Process ID (PID): A unique number assigned to each process.
+    - Parent Process ID (PPID): The ID of the parent process.
+    - User ID (UID): The ID of the user who owns the process.
+    - Group ID (GID): The ID of the group who owns the process.
+    - Process Status: The current state of the process.
+    - Process Priority: The priority of the process.
+    - Process Nice Value: The nice value of the process.
+    - Process CPU Usage: The CPU usage of the process.
+    - Process Memory Usage: The memory usage of the process.
+    - Process Start Time: The time when the process started.
+    - Process Command: The command that started the process.
+
+  <br>
+  
+  - Types of processes:
+    - Foreground process: A process that runs in the foreground.
+    - Background process: A process that runs in the background.
+    - Zombie process: A process that has completed its execution but still has an entry in the process table.
+    - Orphan process: A process whose parent process has terminated.
+
+  <br>
+
+  - Threads:
+    - Threads are sub-processes of a process(s).
+    - Threads share the same memory space.
+    - Threads are used to perform multiple tasks simultaneously.
+    - Threads are created using the pthread library.
+
+  <br>
+
+  - The `ps` command:
+    - `ps -e`: Display all the processes.
+    - `ps -f`: Display the full format.
+    - `ps -l`: Display the long format.
+    - `ps -u`: Display the user format.
+    - `pstree command`: Display the process tree.
+    - `pgrep command`: Display the process ID of a process.
+    - `pgrep -u <username>`: Display the process ID of a user.
+    - `pstree -p`: Display the process tree with the process ID.
+    - `pstree -c -p`: Display the process tree with the command and process ID.
+
+  <br>
+
+  - Commands:
+    - `top` command: Display the dynamic real-time view of the system.
+      - Use `q` to quit the `top` command.
+    - `htop` command: Display the dynamic real-time view of the system.
+      - Use `q` to quit the `htop` command.
+    - `uptime` command: Display the system uptime.
+    - `w` command: Display the system uptime and the users who are logged in.
+    - `who` command: Display the users who are logged in.
+    - `whoami` command: Display the current user.
+    - `last` command: Display the last logged in users.
+    - `last -n <number>`: Display the last n logged in users.
+    - `last -x`: Display the system shutdown and reboot times.
+
+  <br>
+
+  - Signal(s) & Process(s) killing:
+  - Signals are used to communicate with the process.
+  - Number of signals: 64.
+  - `kill` command: Send a signal to a process.
+    - `kill -l`: List the signals.
+    - `kill -9 <PID>`: Kill a process forcefully.
+    - `kill -15 <PID>`: Kill a process gracefully.
+    - `kill -SIGKILL <PID>`: Kill a process using the signal name.
+    - `kill -SIGTERM <PID>`: Kill a process using the signal name.
+  - `killall` command: Kill a process by name.
+    - `killall -9 <process_name>`: Kill a process by name forcefully.
+    - `killall -15 <process_name>`: Kill a process by name gracefully.
+    - `killall -SIGKILL <process_name>`: Kill a process by name using the signal name.
+    - `killall -SIGTERM <process_name>`: Kill a process by name using the signal name.
+  - `pkill` command: Kill a process by name.   
+    - `pkill -9 <pattern>`: Kill a process by name forcefully.
+    - `pkill -15 <pattern>`: Kill a process by name gracefully.
+    - `pkill -SIGKILL <pattern>`: Kill a process by name using the signal name.
+    - `pkill -SIGTERM <pattern>`: Kill a process by name using the signal name.
+
+  <br>
+
+  - Difference between `kill`, `killall`, and `pkill` command:
+    - `kill` is for sending signals to specific PIDs.
+    - `killall` sends signals to all processes with a given name.
+    - `pkill` sends signals to processes matching a pattern.
+
+  <br>
+
+  - Foreground & background processes:
+    - Foreground process: A process that runs in the foreground.
+    - Background process: A process that runs in the background.
+    - Use & in the end of the command to run the command in the background.
+    - `jobs` command: Display the background jobs.
+    - `bg` command: Move a process to the background.
+    - `bg %<job_number>`: Move a process to the background using the job number.
+    - `fg` command: Move a process to the foreground.
+    - `fg %<job_number>`: Move a process to the foreground using the job number.
+    - `ctrl + z`: Suspend a process.
+    - `ctrl + c`: Terminate a process.
+    - `ctrl + d`: Exit the shell.
+    - `nohup <command>`: Run a command that does not terminate when the shell is closed.
+
+  
