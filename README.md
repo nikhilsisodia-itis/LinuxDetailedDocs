@@ -1071,4 +1071,33 @@ This is a detailed documentation of Linux commands, including their usage, optio
       - `sudo apt install <path-to-the-file>`: Install a package from a file.
       - `sudo apt autoclean`: Clean the package cache.
 
-   
+  ## Module 24- Task Automation & Scheduling:
+  - Task automation and scheduling is the process of automating and scheduling tasks.
+  - Task automation and scheduling is used to automate repetitive tasks.
+  - Task automation and scheduling is used to schedule tasks at specific times.
+  - cron:
+    - cron is a time-based job scheduler.
+    - cron is used to schedule tasks at specific times.
+    - cron is used to automate repetitive tasks.
+    - cron is used to run tasks in the background.
+    - cron is used to run tasks at specific intervals.
+  - System-wide VS individual user cron jobs:
+    - System-wide cron jobs are stored in the /etc/cron.d directory.
+    - Individual user cron jobs are stored in the /var/spool/cron/crontabs directory.
+    - System-wide cron jobs are run as root.
+    - Individual user cron jobs are run as the user.
+  - crontab:
+    - `crontab` command: Schedule tasks using cron.
+    - `crontab -e`: Edit the crontab file.
+    - `crontab -l`: List the crontab file.
+    - `crontab -r`: Remove the crontab file.
+    - `crontab -u <username> -e`: Edit the crontab file of a user.
+    - `crontab -u <username> -l`: List the crontab file of a user.
+    - `crontab -u <username> -r`: Remove the crontab file of a user.
+  - crontab file format:
+    - Minute: The minute when the task will run.
+    - Hour: The hour when the task will run.
+    - Day of the month: The day of the month when the task will run.
+    - Month: The month when the task will run.
+    - Day of the week: The day of the week when the task will run.
+    - Command: The command that will run.
