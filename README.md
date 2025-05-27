@@ -1101,3 +1101,37 @@ This is a detailed documentation of Linux commands, including their usage, optio
     - Month: The month when the task will run.
     - Day of the week: The day of the week when the task will run.
     - Command: The command that will run.
+
+  ## Module 25- Getting System's Hardware information:
+    - `lscpu` command: Display the CPU information.
+    - `lsusb` command: Display the USB devices.
+    - `lshw` command: Display the hardware information.
+    - `lshw -short`: Display the hardware information in a short format.
+    - `lshw -json`: Display the hardware information in a JSON format.
+    - `lshw -html`: Display the hardware information in an HTML format.
+    - `inxi` command: Display the system information.
+    - `inxi -F`: Display the full system information.
+    - `inxi -Fi`: Display the full system information with the IP address.
+    - `inxi -Fx`: Display the full system information with the hardware information.
+    - `inxi -Fz`: Display the full system information with the hardware and IP address.
+    - `inxi -Fxxx`: Display the full system information with the hardware, IP address, and the kernel information.
+    - `fdisk -l`: Display the disk information.
+    - `free -h`: Display the memory information.
+    - `df -h`: Display the disk space information.
+    - `uptime`: Display the system uptime.
+
+  <br>
+
+  - sysmted:
+    - `systemd `is a system and service manager.
+    - `systemd` is used to manage the system services.
+    - `systemd` is used to manage the system processes.
+    - `systemd` is used to manage the system resources.
+    - `systemctl` command: Manage the system services.
+    - `systemctl status <service_name>`: Display the status of a service.
+    - `systemctl start <service_name>`: Start a service.
+    - `systemctl stop <service_name>`: Stop a service.
+    - `systemctl restart <service_name>`: Restart a service.
+    - `systemctl enable <service_name>`: Enable a service.
+    - `systemctl disable <service_name>`: Disable a service.
+    - `systemctl list-units`: List all the units.
