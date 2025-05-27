@@ -693,3 +693,19 @@ This is a detailed documentation of Linux commands, including their usage, optio
       - `+`: Add the permission.
       - `-`: Remove the permission.
       - `=`: Set the permission.
+
+  <br>
+
+  ### Note: Parent directory permssion are given priority over the child directory permission.
+
+  ## Module 19- Change file ownership:
+  - `chown` command: Change the owner & group of a file.
+    - `chown <owner>:<group> <file_name>`: Change the owner and group of a file.
+    - `chown -R <owner>:<group> <directory_name>`: Change the owner and group of a directory recursively.
+    - `chown id <owner>:<group> <file_name>`: Change the owner and group of a file by ID.
+  - Only root can change the owner and group of a file.
+  - A non-privileged user can only change the group of a file to a group that the user is a member of.
+
+  <br>
+
+  
